@@ -688,21 +688,6 @@ Rule to Remember
 -------------------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -git branch  - Check Available branchs
 -git branch <branch name> - Create new branch
    -git branch release
@@ -730,24 +715,7 @@ Push to Central:
 -commits
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--------------------------------------------------
 
 What Happens Inside the .git Folder?
 Different components are created like:
@@ -762,83 +730,7 @@ Different components are created like:
 
 
 git log oneline
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------------------------
 Imp:
 
  git push
