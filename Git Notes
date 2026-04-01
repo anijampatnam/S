@@ -1,0 +1,1235 @@
+
+
+GIT/GIT HUB  
+GIT: Global including tool
+
+->initate repository/clone repository ->
+->create file -> initially it is work space
+->git add file name -> move to stageing area
+->commit 
+->push -> push to local/central repository
+
+--------------------------------------------------------------
+
+pwd - current working direcory
+create directory:
+mkdir dir1
+mkdir dir1 dir2 dir3
+mkdir dir{1..100}
+
+create file/folder:
+touch file1
+touch file1 file2 file3
+touch file{1..100}
+
+--------------------------------------------------------------------
+
+Viwes:
+ls      -> Lists visible files and directories in the current folder
+
+ls -a   -> Lists all files including hidden files (those starting with .)
+
+ls -la  -> Lists all files (including hidden) with detailed information 
+           (permissions, owner, size, date)
+-----------------------------------------------------------
+
+Delte operations:
+Files delete:
+rm file.txt        -> Delete a single file
+rm -i file.txt     -> Delete file with confirmation
+rm -f file.txt     -> Force delete file (no warning)
+rm file1.txt file2.txt file3.txt  -> Delete multiple files
+rm a*              -> Delete all files starting with 'a'
+rm *               -> Delete all files in current directory
+rm file{6..10}.txt
+
+direcory delete:
+
+rmdir foldername       -> Delete empty directory
+rm -r foldername       -> Delete directory with all contents
+rm -rf foldername      -> Force delete directory and all contents (no warning)
+rm -r folder1 folder2  -> Delete multiple directories
+rm -r */               -> Delete all directories in current directory
+
+cd .. -> changes the current directory
+enter repository,directory
+
+----------------------------
+# 1. Show the most recent commit with full details
+git log -1
+
+# 2. Show the last 5 commits in brief (one line each)
+git log --oneline -5
+
+# 3. Show just the hash of the latest commit
+git rev-parse HEAD
+
+# 4. Show recent commits with a simple graph and branch info (last 5 commits)
+git log --oneline --graph --decorate -5
+
+# 5. Show all commits in one line each (full history)
+git log --oneline
+-------------------------------------------
+-> Update file
+-it moved to workplace
+-add to stageing
+-commit
+-> delete file
+-add 
+-commit
+----------------------------------
+Error:
+hp@LAPTOP-E2UH0GEB MINGW64 /e/git/2603/gcp (main)
+$ git push
+remote: Permission to gcpworkplace/gcp.git denied to anijampatnam.
+fatal: unable to access 'https://github.com/gcpworkplace/gcp.git/': The requested URL returned error: 403
+
+-> in real time who are working in the
+project they would have collabrator permissions
+->only collabrators can work together in collabrative way
+
+Give Accass:
+- Go to repositories
+- settings
+- Collaborators
+- Manage access
+---------------------------------
+
+git pull --rebase 
+-data sync issue
+
+------------------------
+BRENCH:
+-branch mean copy of the data
+- branch is a superation
+------
+- project - > implement functionality
+            -> copy the code
+			     -> implement second functionality
+here every thing okay they will mearge/integrate the data 
+-relase branch 
+-available to the public
+-if any problem 
+- create hotfix branch
+- fix and marge release branch and main branch
+
+-Master branch always production ready/ prodection deploy code
+
+-major release (every 3 months)
+-minor release (every month)
+what is your branching stretagy?
+
+---------------------
+git branch  -> know the branchs
+git branch <branch name> -> create new branch
+git checkout <br.name> -> switch new branch
+---
+---
+---
+git checkout main/master
+git mearge <br.name>
+---------------------
+Practice:
+-create empy folder
+-intiate repository
+-create file
+- move to branching
+- commit
+- check branch
+- create release branch
+
+
+------------------
+commands:
+-git branch
+-git branch rel
+-git checkout rel 
+enhance------
+
+-git checkout master
+-git merge rel
+
+
+ -----------
+Delete :
+git branch -d fet_vc
+
+-> if you want delete without merge 
+git branch -D 
+--------
+branchs move centrally:
+---------------------------------
+vi editor:
+--- VI / VIM CHEAT SHEET ---
+
+# Modes
+i     - insert text at cursor
+a     - insert after cursor
+o     - open a new line below
+Esc   - go back to normal mode
+
+# Save / Quit
+:w        - save (write)
+:q        - quit (only if no changes)
+:wq       - save and quit
+:x        - save and quit
+:q!       - quit without saving (force quit)
+
+# Copy / Paste
+yy        - copy (yank) current line
+5yy       - copy 5 lines (replace 5 with number)
+v         - enter visual mode (select text)
+y         - copy selected text
+p         - paste after cursor
+P         - paste before cursor
+ggVGy    - copy entire file
+
+# Navigation
+h / j / k / l  - left / down / up / right
+gg             - go to start of file
+G              - go to end of file
+
+-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================
+
+Task:
+1.git init - create files and practics
+-.git hidden folder created
+- it will track our code
+- it will manage our code
+- it will allow you to do version controling
+- To check this file ls -la
+- once we initalize repo we can see master branch 
+
+--------------------------------------------------
+
+2.configure the user:
+To do any operations we need users
+git config --global user.name <name>
+git config --global user.name "ashok"
+git config --global user.email <email>
+git config --global user.email a@gmail.com
+-Now if can modify any code outher details will be recorded/tracked
+
+----------------------------------------------------
+
+3.Move code : 
+-we can add/commit single,multiple,all files
+workplace:
+- initally if any file create , it will be in the work place
+- it is untracked file
+- To move workplace to stageing area we have to run "git add filename" command
+stageing:
+- To move staging to local.repo  we have to run "git commit -m "message"" command
+- once it commit we can see the history using - "git log"
+local repo:
+- once file commit it will availabe in local repo
+- now we push file from local.repo to central repository
+- to check the status - git status
+- to check info - git log - who,when -it commit
+
+------------------------------------------------
+
+4.create own repo - clone and push
+-create git account
+-create repo
+
+--------------------------------------------------
+
+5.clone central repo - add files and push
+-Open git bash
+-git clone URL  - All check: ll , enter in to repo : cd directory.name
+-now we can see main branch / now we are able to see main branch
+-create file/add code
+-git add . - move to stageing 
+-git commit -m "message" - commit the code/file
+-git log - here we can see the history like- commit id, authour,date ..
+-git show commitid - we can see the file details..
+-git push - now you wolud see pop-up -enter login details
+-now we are able see pussed code in central repo
+
+--------------------------------------------------
+
+6.Generate Token:
+-open github account
+-click on profile
+-go to settings
+-developer settings
+-personal access token
+-Token
+-Generate new token
+-select required fields and clik on create
+ 
+---------------------------------------------------
+ 
+7.Push
+-whenever we push first time we needs to authanticate
+   user.name/passwork or token
+   
+------------------------------------------------------
+   
+8.Modified file:
+-if any time we change/modify the code it wll move to workspace
+   
+-------------------------------------------------------
+   
+9. change authenticateion:
+mcuser
+.....
+same process..........
+
+-------------------------------------------------------
+
+10.delete & check 
+-we can see deletion entry also in workplace
+...
+same process
+
+Note: if we comunicate with central repository we need to push
+add new file,modified file,delete file
+
+--------------------------------------------------------
+
+11.Error permission denaid - whenver we push code
+-A user try to push B user's project
+
+sol: User should have collaborators access
+-project -> settings ->collaborators -> 
+ Manage access -> add people ->scarch name and add.
+ once add the mail -they will get approval mail and 
+ we need to accept
+ 
+ -------------------------------------------------------
+ 
+ 12.Error while push the code:
+ git push - Got Error
+ -a & B are working
+ -a created file and pushed
+ -b clone that file and working
+ -b added new file and pushed
+ -a added file and try to push - it is showing error
+ - Data not sync - with central data
+ 
+ git pull -rebase
+
+--------------------------------------------------------
+ 
+13.create branch merge with main branch - locally
+
+-Branch is a copy of data
+-Main branch - on going implement is going
+-so create sub branchs and implement new future
+-what are the enhancement we do everything stored into main branch
+create branch:
+-git branch  - Check Available branchs
+-git branch <branch name> - Create new branch
+   -git branch release
+-git checkout <branch.name> - switched to branch 
+   -git checkout release 
+.....
+create file and commit
+.....
+-git checkout main
+-git merge release - whatever data in release branch it merge with main branch
+
+--------------------------------------------------
+
+14.Delete Branch:
+-git branch -d <branch name> - Delete the branch
+     -git branch -d release 
+Delete Without mearge: without merge with master branch deleting it
+-git branch -D <branch name> - Delete the branch
+     -git branch -D release
+
+----------------------------------------------------
+
+15.create branch merge central branch - centrally	
+-clone repo using URL
+-git branch  - Check Available branchs
+-git branch <branch name> - Create new branch
+   -git branch release
+-git checkout <branch.name> - switched to branch 
+   -git checkout release 
+.....
+create file and commit
+.....
+-git checkout main
+-git merge release - whatever data in release branch it merge with main branch
+
+Push to Central:
+-git push <repo.url> <Branch name>
+     -git push URL release
+-git push origin <Branch name>
+     -git push origin release
+	 
+-------------------------------------------------------------
+
+16.create folder and push:
+
+-clone repo using URL
+create folder:
+-mkdir <Dir.name>  -create new direcory/folder
+    -mkdir ashok
+-touch <file.name> - create new file
+    -touch file1 file2
+-git add. -files added to stageing are
+-git commit -m "new files "
+-git push
+
+Note: 
+-if you push in main branch refrence not required
+-if you push from sub branch you should give refrence
+
+-----------------------------------------------------------
+
+17.Vi / vim Editor
+-create and modify the file
+create file:
+-vi <file.name> -create a file
+   -vi ashok
+-now vi/ vim edtior opened
+-esc 
+-click i ->i mean insert , now user able to insert the data
+-enter data
+-esc:w
+-esc:q
+-esc:wq
+-esc:q!
+
+------------------------------------------------------------------------------------------------
+18.Two branchs paralles moving after some time both are merge?
+initate local repo & add files:
+-git init
+-touch test
+-git add .
+-git commit -m "test"
+create Branch:
+-git branch VC
+-git checkout VC
+Note: Above two commands , we can replace with one single command
+-git checkout -b <br.name>  - new branch created and switched to that branch
+   -git checkout -b VC 
+-touch vc1
+-git add .
+-git commit -m vc1 
+Note: if there are multiple words we needs use ""
+-git checkout master
+-touch m1
+-git add .
+-git commit -m m1
+-git checkout VC
+-touch v2
+-git add .
+-git commit -m v2
+-git checkout master
+-touch m2
+-git add .
+-git commit -m m2
+
+-git merge VC ->when we mearge vi editor opend
+-we need to add valid comment
+-commit id create for merge also
+
+-----------------------------------------------------
+
+19:There are Two branches while merge i need only one file not entair branch
+-it mean only specipic commit id data should come / merge
+- remaining should be ignor
+git cherry-pick cid : it merge only mentioned commit id
+- git cherry-pick njsgdjs525
+
+------------------------------------------------------
+
+20. GIT conflict: 
+when two developers working same file but contant is difference
+
+-A branch create file1
+-B branch create m1
+-A branch create file2
+-B branch create m2
+-A branch create file3
+-B branch create m3
+--up the this they are created some files there no conflict
+-A branch create test
+-B branch create test
+--here both branchs created same code/same file  with different data(file name)
+
+now, both the dev should confirm the code and commit
+
+---------------------------------------------------
+
+21.Branch:
+git branch -a -> all shows branchs
+git branch -r -> It shows only remote branchs
+git branch -> only local branch
+
+git branch -v  ->Show last commit on each branch
+ 
+Show local branches with merged/unmerged status:
+git branch --merged   # branches already merged into current
+git branch --no-merged # branches not yet merged
+ 
+How to checkout :
+git checkout -b master origin/master
+
+git checkout sara --
+
+Note:
+when we create branch in github manually 
+to check in git we needs to run
+-git fetch
+
+
+import: all remote branchs to local
+
+git branch -r | grep -v '\->' | while read -r b; do
+  git branch --track "${b#origin/}" "$b" 2>/dev/null
+doneHow 
+
+1. single branch clone/copy remote to local
+
+git switch <branch-name>
+
+2. create branch without switching
+
+-git branch relaese4 sara1   # typo
+
+3. Rename instead of recreating (if typo happens)
+
+-git branch -m relaese4 release4  ->rename
+
+4. Combine multiple branches into one new branch
+
+git switch -c new-branch
+git merge sara1
+git merge release3
+
+create an empty branch
+
+create an empty branch
+---------------------------------------------------
+
+22.Merge two branches without switching
+ 
+ 
+# create a temp branch starting from rel
+git branch temp rel
+
+# switch to temp
+git checkout temp
+
+# merge sara into temp
+git merge sara
+
+Now temp has both rel + sara merged, without touching main.
+You can then inspect, test, or push temp to remote:
+
+git push origin temp
+ 
+------------------------------------------------
+23.How to delete branch?
+Local 
+git branch -D sara   -> Delete operations
+
+delete the branch from GitHub:
+-git push origin --delete sara
+ 
+--------------------------------------------------
+
+24. pull request:
+->pull request
+    or
+->compare & pull requeste
+
+->select branchs 
+
+we can reviewvers also
+
+Pull -How it work open-source project?
+
+fork - we will get local copy of the required project
+made chenges and if you want ot merge we needs to rise a pull request
+ 
+
+---------------------------
+25.Merge two branches
+-create 2 branchs and add giles and commit
+-one is alrady pushed
+-git push origin sara1
+* merge
+pull request ->select:base ->select:compare->
+add reviews -> click create pull request
+-after approvl -merge pull request
+---------------------------
+26.fork
+->open required repo
+->click fork
+->enter pero name
+->create
+->add files
+->commit changes
+->contribute
+->open pull request
+->create pull crequest
+
+------------------------------------
+27.Branch protection rules:
+Github -> settings -> branchs
+->Branch protection rules - Add 
+-add/select madatory fields and click create
+
+Branch protection rules define whether collaborators can 
+delete or force push to the branch and set requirements for 
+any pushes to the branch, such as passing status checks 
+or a linear commit history.
+
+
+use: 
+
+avaid unwanted accedental merges
+
+
+------------------------------------------
+28.Filtering - logs
+git log -3 ->latest 3 logs will display
+git log  --oneline -> only commit id & commit message
+git log --author mcuser -> if you want check particular author
+git log  --since "03-25-2026" -> log history from
+
+----------------------
+
+ 29. Config:
+ git config --list   -> display the all the congig info
+ git config --global user.name  -> it display current user
+ 
+ ---------------------------
+ 30.Alias
+ git config --global alias.s "status"
+ git config --global alias.s "status"
+ git config --global alias.s "status"
+ git s
+ 
+ git log
+ git config --global alias.l "log"
+ git la
+ 
+ Remove alias:
+  git config --global  --unset alias.s
+ 
+ -------------------------
+ 31. Amend  :
+ - using the amend we can update / change  - latest commit message
+ git commit --amend -m "audio is lear"
+ 
+---add file 
+git commit --amend -m "All Files"  -> all audio files single commit id
+git commit --amend -m "All Files"  -m "Ticket ID: #123443"
+
+     1.Same code + new message
+     2.New code + same message
+     3.New code + new message
+
+------------------------------
+32. case stady:
+-some one added code  , commited somthing 
+-all of sudden code break /application break
+-severity 1 ticket raise, client escalated , production impaceted
+*in this case
+-check recent changes and delete 
+-revert the commit id 
+
+
+--------------------------------------
+33. Revert feature:
+
+git revert <commit id>
+
+-add files and commit -future1
+->commit id created
+-add files feture1 and update & delete file in guture1
+-
+
+
+if you get any aeeor:
+git add AC2
+git revert --continue
+
+Cancel everything:
+git revert --abort
+commit directly
+-git commit -am "commit message"
+
+----------------------------------------------
+34.add & commit:
+-first time we need to add & commit
+-whenever file in  "modified" state then 
+ we can perform "-am" at a time add and commit
+ - git commit -am "message"
+ 
+----------------------------------------
+35. Imp commands
+1.Staging to Workplace:
+-git reset HEAD fname 
+
+2. local repo to stageing:
+-git reset --soft cid (n-1) 
+
+3.local repo to workplace:
+git reset --mixed cid (n-1)
+
+
+Rule to Remember
+🔁 Revert = Undo safely
+🔄 Reset = Rewrite history
+
+-------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-git branch  - Check Available branchs
+-git branch <branch name> - Create new branch
+   -git branch release
+-git checkout <branch.name> - switched to branch 
+   -git checkout release 
+.....
+create file and commit
+.....
+-git checkout main
+-git merge release - whatever data in release branch it merge with main branch
+
+Push to Central:
+-git push <repo.url> <Branch name>
+     -git push URL release
+-git push origin <Branch name>
+     -git push origin release
+
+
+
+
+-------------------------------
+-pull requests
+-Branchs
+-Tags
+-commits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What Happens Inside the .git Folder?
+Different components are created like:
+-HEAD – Points to the current branch
+-config – Stores repository configuration
+-objects/ – Stores all Git data (files, commits)
+-refs/ – Stores branch and tag references
+-index – Staging area for commits
+-logs/ – History of branch updates
+-hooks/ – Scripts for automation
+
+
+
+git log oneline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Imp:
+
+ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+1.
+git push --set-upstream https://github.com/gcpworkplace/gcp.git master
+
+
+
+create multiple :
+
+mkdir sunny katrina kareena
+
+for dir in sunny katrina kareena
+do
+  for month in jan feb mar apr may jun jul aug sep oct nov dec
+  do
+    for year in 2020 2021 2022
+    do
+      mkdir -p "$dir/${month}_${year}"
+    done
+  done
+done
+
+
+---------------------------
+IMP:
+-it out commit if we are tying to move branch if will show error
+-without commit code / files we are not able see branchs?
+-I have created branch , after i created same files again in sub branch
+  after i merged , is shown alrady up to date
+-i have create file4 in ashok branch , and file 5 in main branch 
+
+-------------------------
+fresh start: git
+rm -rf .git
+git init
+git add .
+git commit -m "fresh start"
+----------------------
+git checkout --orphan latest_branch
+git add .
+git commit -m "clean commit"
+git branch -D main
+git branch -m main
+
+
+Error:
+$ git merge rel1
+fatal: refusing to merge unrelated histories
+
+hp@LAPTOP-E2UH0GEB MINGW64 /e/DM (ashok)
+$  git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+
+--------------
+1.i have create file in main branch and pushed to central repo
+2. created new branch and create a file and try to push central repo
+
+Error:
+fatal: The current branch rel has no upstream branch. 
+To push the current branch and set the remote as upstream, 
+use git push --set-upstream origin rel To have this happen automatically for branches without a tracking upstream, 
+see 'push.autoSetupRemote' in 'git help config'.
+If you don’t want to see this again:
+git config --global push.autoSetupRemote true
+
+
+-----------------------------
+Pull & merge:
+git checkout main          # go to main
+git pull origin main       # get remote changes
+git merge rel              # merge local feature branch
+git push origin main       # update remote main
+
+
+Summary:
+
+git ls-remote origin → shows branches & commit hashes, not files.
+git ls-tree or checking out the branch → shows files in that branch.
+
+
+----------------
+check all branchs in repo:
+git branch -a
+
+Git lists all branches, including your local branches and the remote branches it knows about.
+
+
+---------------------------
+can create a local branch from the remote branch:
+
+git checkout -b master origin/master
+git checkout -b sara origin/sara
+
+
+-----------------------------------------
+git reflog:
+git reflog is like a history of everything your Git HEAD has done locally 
+— even things that aren’t in commits anymore.
+
+------------------
+check upstream:
+
+git branch -vv
+------------------
+Real-world analogy
+
+Think of it like:
+
+Local branch = your notebook 📓
+Remote branch = Google Drive ☁️
+
+Setting upstream = linking the notebook to a specific file in Drive
+
+So next time:
+
+git push = upload to that file
+git pull = download from that file
+--------------------------------------------
+set upstream:
+
+git push -u origin sara
+
+------------------------------
+ Check Parents:
+ 
+ git log --oneline --graph
+--------------------
+switch → move between branches
+restore → undo file changes
+checkout → old all-in-one tool
+-------------------
+Fetch updates origin/main
+Merge updates main
+
+git fetch = get latest changes from remote WITHOUT touching your work
+✔️ Downloads changes
+❌ Does NOT merge
+
+git pull
+Downloads changes
+Automatically merges into your branch
+
+
+🧠 Real-world analogy
+clone → download full project (first time)
+fetch → check for updates (like refreshing inbox)
+pull → download + apply updates
+
+memory trick
+clone → “get the project”
+fetch → “check for updates”
+pull → “get + apply updates”
+
+👉 git pull needs an existing repo
+
+🧠 Final analogy (perfect)
+clone → 🆕 install the app
+pull → 🔄 update the app (download + install)
+fetch → 📥 download update info (but don’t install)
+
+👉 You can’t update something that isn’t installed yet
+
+Real-life example
+
+Think of your phone:
+
+clone → install WhatsApp
+fetch → check Play Store for updates
+pull → update WhatsApp
+
+👉 fetch = download updates without affecting your work
+-----------------------------------------------------
+Tracked/ untracked: Need to check
+
+-> tracked(committed) files are part of the branch and available in new branch
+-> untracked files are NOT part of any branch, but stay in working directory
+-> committing in another branch does NOT remove untracked files
+
+---------------------------------
+ Delete branch :
+ 
+ git push origin --delete Release1 Release2 mahi release3 sanju sara sara1 master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
