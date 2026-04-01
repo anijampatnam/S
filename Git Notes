@@ -1,17 +1,16 @@
+GIT / GITHUB
+GIT: Global versioning tool
 
-
-GIT/GIT HUB  
-GIT: Global including tool
-
-->initate repository/clone repository ->
-->create file -> initially it is work space
-->git add file name -> move to stageing area
-->commit 
-->push -> push to local/central repository
+-> initialize repository / clone repository ->
+-> create file -> initially it is workspace
+-> git add file name -> move to staging area
+-> commit
+-> push -> push to local/central repository
 
 --------------------------------------------------------------
 
-pwd - current working direcory
+pwd - current working directory
+
 create directory:
 mkdir dir1
 mkdir dir1 dir2 dir3
@@ -24,230 +23,175 @@ touch file{1..100}
 
 --------------------------------------------------------------------
 
-Viwes:
-ls      -> Lists visible files and directories in the current folder
+Views:
 
-ls -a   -> Lists all files including hidden files (those starting with .)
+ls -> Lists visible files and directories in the current folder
 
-ls -la  -> Lists all files (including hidden) with detailed information 
-           (permissions, owner, size, date)
+ls -a -> Lists all files including hidden files (those starting with .)
+
+ls -la -> Lists all files (including hidden) with detailed information
+(permissions, owner, size, date)
 -----------------------------------------------------------
 
-Delte operations:
+Delete operations:
+
 Files delete:
-rm file.txt        -> Delete a single file
-rm -i file.txt     -> Delete file with confirmation
-rm -f file.txt     -> Force delete file (no warning)
-rm file1.txt file2.txt file3.txt  -> Delete multiple files
-rm a*              -> Delete all files starting with 'a'
-rm *               -> Delete all files in current directory
+
+rm file.txt -> Delete a single file
+rm -i file.txt -> Delete file with confirmation
+rm -f file.txt -> Force delete file (no warning)
+rm file1.txt file2.txt file3.txt -> Delete multiple files
+rm a* -> Delete all files starting with 'a'
+rm * -> Delete all files in current directory
 rm file{6..10}.txt
 
-direcory delete:
+Directory delete:
 
-rmdir foldername       -> Delete empty directory
-rm -r foldername       -> Delete directory with all contents
-rm -rf foldername      -> Force delete directory and all contents (no warning)
-rm -r folder1 folder2  -> Delete multiple directories
-rm -r */               -> Delete all directories in current directory
+rmdir foldername -> Delete empty directory
+rm -r foldername -> Delete directory with all contents
+rm -rf foldername -> Force delete directory and all contents (no warning)
+rm -r folder1 folder2 -> Delete multiple directories
+rm -r */ -> Delete all directories in current directory
 
 cd .. -> changes the current directory
 enter repository,directory
 
 ----------------------------
-# 1. Show the most recent commit with full details
+1. Show the most recent commit with full details
+
 git log -1
 
-# 2. Show the last 5 commits in brief (one line each)
+2. Show the last 5 commits in brief (one line each)
+
 git log --oneline -5
 
-# 3. Show just the hash of the latest commit
+3. Show just the hash of the latest commit
+
 git rev-parse HEAD
 
-# 4. Show recent commits with a simple graph and branch info (last 5 commits)
+4. Show recent commits with a simple graph and branch info (last 5 commits)
+
 git log --oneline --graph --decorate -5
 
-# 5. Show all commits in one line each (full history)
+5. Show all commits in one line each (full history)
+
 git log --oneline
 -------------------------------------------
 -> Update file
--it moved to workplace
--add to stageing
--commit
+
+it moves to workspace
+add to staging
+commit
+
 -> delete file
--add 
--commit
+
+add
+commit
 ----------------------------------
 Error:
-hp@LAPTOP-E2UH0GEB MINGW64 /e/git/2603/gcp (main)
-$ git push
-remote: Permission to gcpworkplace/gcp.git denied to anijampatnam.
-fatal: unable to access 'https://github.com/gcpworkplace/gcp.git/': The requested URL returned error: 403
+-> In real time, whoever is working in the project must have collaborator permissions
+-> Only collaborators can work together in a collaborative way
 
--> in real time who are working in the
-project they would have collabrator permissions
-->only collabrators can work together in collabrative way
+Give Access:
 
-Give Accass:
-- Go to repositories
-- settings
-- Collaborators
-- Manage access
+Go to repositories
+Settings
+Collaborators
+Manage access
 ---------------------------------
 
-git pull --rebase 
--data sync issue
+git pull --rebase
 
-------------------------
-BRENCH:
--branch mean copy of the data
-- branch is a superation
-------
-- project - > implement functionality
-            -> copy the code
-			     -> implement second functionality
-here every thing okay they will mearge/integrate the data 
--relase branch 
--available to the public
--if any problem 
-- create hotfix branch
-- fix and marge release branch and main branch
+data sync issue
 
--Master branch always production ready/ prodection deploy code
+BRANCH:
 
--major release (every 3 months)
+branch means copy of the data
+branch is a separation
+project -> implement functionality
+-> copy the code
+-> implement second functionality
+everything is okay, then they will merge/integrate the data
+release branch -> available to the public
+if any problem
+-> create hotfix branch
+-> fix and merge release branch and main branch
+master branch is always production-ready / production deployed code
+major release (every 3 months)
 -minor release (every month)
-what is your branching stretagy?
 
----------------------
-git branch  -> know the branchs
+What is your branching strategy?
+
+git branch -> know the branches
 git branch <branch name> -> create new branch
-git checkout <br.name> -> switch new branch
----
----
----
+git checkout <branch name> -> switch branch
+
 git checkout main/master
-git mearge <br.name>
+git merge <branch name>
+
 ---------------------
 Practice:
--create empy folder
--intiate repository
--create file
-- move to branching
-- commit
-- check branch
-- create release branch
 
+create empty folder
+initialize repository
+create file
+move to branch
+commit
+check branch
+create release branch
 
-------------------
 commands:
--git branch
--git branch rel
--git checkout rel 
+
+git branch
+git branch rel
+git checkout rel
+
 enhance------
 
--git checkout master
--git merge rel
-
+git checkout master
+git merge rel
 
  -----------
-Delete :
+Delete:
+
 git branch -d fet_vc
 
--> if you want delete without merge 
-git branch -D 
---------
-branchs move centrally:
----------------------------------
+-> if you want to delete without merge
+git branch -D
+
 vi editor:
+
 --- VI / VIM CHEAT SHEET ---
 
-# Modes
-i     - insert text at cursor
-a     - insert after cursor
-o     - open a new line below
-Esc   - go back to normal mode
+Modes
 
-# Save / Quit
-:w        - save (write)
-:q        - quit (only if no changes)
-:wq       - save and quit
-:x        - save and quit
-:q!       - quit without saving (force quit)
+i - insert text at cursor
+a - insert after cursor
+o - open a new line below
+Esc - go back to normal mode
+Save / Quit
 
-# Copy / Paste
-yy        - copy (yank) current line
-5yy       - copy 5 lines (replace 5 with number)
-v         - enter visual mode (select text)
-y         - copy selected text
-p         - paste after cursor
-P         - paste before cursor
-ggVGy    - copy entire file
+:w - save (write)
+:q - quit (only if no changes)
+:wq - save and quit
+:x - save and quit
+:q! - quit without saving (force quit)
 
-# Navigation
-h / j / k / l  - left / down / up / right
-gg             - go to start of file
-G              - go to end of file
+Copy / Paste
 
------------------------------------------
+yy - copy (yank) current line
+5yy - copy 5 lines
+v - enter visual mode
+y - copy selected text
+p - paste after cursor
+P - paste before cursor
+ggVGy - copy entire file
 
+Navigation
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+h / j / k / l - left / down / up / right
+gg - go to start of file
+G - go to end of file
 
 ================================================
 
